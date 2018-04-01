@@ -19,8 +19,9 @@ body{
   height: 80%;
   width: 70%;
   display: grid;
-  grid-template-columns:35% 1fr;
+  grid-template-columns:40% 1fr;
   grid-template-rows: 70px 1fr;
+  grid-gap: 1rem;
   grid-template-areas:
   "header header"
   "img statistiche"
@@ -46,9 +47,17 @@ header{
   background-color: black;
   color:white;
 }
-#img{
+#immagine{
+  color: white;
+  text-align: center;
+  border: 2px solid white;
   grid-area: img;
 }
 #statistiche{
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  color:white;
   grid-area: statistiche;
 }

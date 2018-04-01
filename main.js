@@ -1,4 +1,5 @@
 var giocatore1 = {
+  foto: 'desciglio.jpg',
   nome: 'De Sciglio',
   posizione:'Difensore',
   partite_giocate:partiteGiocate(),
@@ -132,6 +133,22 @@ var giocatore19 = {
   partite_giocate:partiteGiocate(),
   goal_fatti: goalFatti(),
   media_voto: mediaVoto(),
+}
+
+var giocatoriJuve = [giocatore1,giocatore2,giocatore3,giocatore4,giocatore5,giocatore6,giocatore7,giocatore8,giocatore9,giocatore10,giocatore11,giocatore12,giocatore13,giocatore14,giocatore15,giocatore16,giocatore17,giocatore18,giocatore19];
+var stat = document.getElementById('statistiche_lista')
+var foto = document.getElementById('immagine')
+
+var cerca = document.getElementById('button');
+cerca.addEventListener('click', findGiocatore);
+
+function findGiocatore() {
+  var giocatore_cercato = document.getElementById('ricercato').value;
+  for (var i = 0; i < giocatoriJuve.length; i++) {
+    if (giocatoriJuve[i].nome.includes(giocatore_cercato)) {
+      stat.innerHTML = "<li class ='statistiche'>"+ 'Nome: ' + giocatoriJuve[i].nome + '<li>' + ' Ruolo: '+ giocatoriJuve[i].posizione +'</li>' + '<li>' + 'partite giocate: ' +giocatoriJuve[i].partite_giocate +'</li>'+ '<li>'+'goal fatti: '  + giocatoriJuve[i].goal_fatti+'</li>'+'<li>'+ 'media voto: ' + giocatoriJuve[i].media_voto +'</li>'
+    }
+  }
 }
 
 function partiteGiocate() {
