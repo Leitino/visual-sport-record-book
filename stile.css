@@ -20,13 +20,15 @@ body{
   width: 70%;
   display: grid;
   grid-template-columns:40% 1fr;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 70px 1fr 100px;
   grid-gap: 1rem;
   grid-template-areas:
   "header header"
   "img statistiche"
+  "img logo"
 }
 header{
+  font-family: 'Arvo', serif;
   grid-area: header;
   color: white;
   border: 3px solid white;
@@ -54,10 +56,32 @@ header{
   grid-area: img;
 }
 #statistiche{
+  font-family: 'Arvo', serif;
   border: 2px solid white;
   text-align: center;
   color: white;
   font-size: 1.5em;
   color:white;
   grid-area: statistiche;
+}
+.logo{
+  border: 2px solid white;
+  grid-area: logo;
+  background-image: url(https://staticr1.blastingcdn.com/media/photogallery/2015/9/29/660x290/b_620x273/stemma-della-juventus-su-sfondo-bianco-nero_441013.jpg);
+  background-position: center;
+  background-size:contain;
+}
+.filtro{
+  color:red;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(250, 250, 250, 0.1);
+}
+.foto_giocatori{
+  width: 75%;
+  height: 100%;
 }
