@@ -139,7 +139,7 @@ var giocatoriJuve = [giocatore1,giocatore2,giocatore3,giocatore4,giocatore5,gioc
 
 var stat = document.getElementById('statistiche_lista')
 var foto = document.getElementById('immagine')
-
+s
 var cerca = document.getElementById('button');
 cerca.addEventListener('click', findGiocatore);
 
